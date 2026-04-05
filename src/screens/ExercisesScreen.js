@@ -78,7 +78,7 @@ export default function ExercisesScreen({ navigation }) {
           <View style={styles.headerBox}>
             <Text style={styles.headerTitle}>📝 Practice Exercises</Text>
             <Text style={styles.headerSub}>
-              Attempt past university entrance MCQ papers and track your score.
+              Attempt past MCQ questions from top universities around the world and track your score.
             </Text>
           </View>
         }

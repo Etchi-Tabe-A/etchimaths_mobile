@@ -8,29 +8,29 @@ import {
   SafeAreaView,
   StatusBar,
   Linking,
+  Image,
 } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import { colors } from '../theme/colors';
 
 const SOCIAL_LINKS = [
   {
-    label: '🌐  Website',
+    label: 'Website',
     url: 'https://sites.google.com/view/etchimaths',
     color: colors.accent,
+    emoji: '🌐',
   },
   {
-    label: '📘  Facebook',
+    label: 'Facebook',
     url: 'https://www.facebook.com/etchimaths',
     color: '#1877F2',
+    iconName: 'logo-facebook',
   },
   {
-    label: '▶  YouTube',
+    label: 'YouTube',
     url: 'https://www.youtube.com/@Etchimaths',
     color: '#FF0000',
-  },
-  {
-    label: '📦  SourceForge',
-    url: 'https://sourceforge.net/projects/etchimaths',
-    color: '#FF6600',
+    iconName: 'logo-youtube',
   },
 ];
 
@@ -44,7 +44,7 @@ export default function AboutScreen() {
       <ScrollView contentContainerStyle={styles.scroll}>
         {/* Header */}
         <View style={styles.heroContainer}>
-          <Text style={styles.heroIcon}>📐</Text>
+          <Image source={require('../../assets/emu.png')} style={styles.heroImg} resizeMode="contain" />
           <Text style={styles.heroTitle}>Etchimaths</Text>
           <Text style={styles.heroEdition}>University Edition</Text>
           <View style={styles.versionBadge}>
@@ -60,7 +60,7 @@ export default function AboutScreen() {
           <Text style={styles.cardHeading}>👨‍💻  Developer</Text>
           <InfoRow label="Name" value="Etchi Tabe A." />
           <InfoRow label="Company" value="Etchiworks" />
-          <InfoRow label="Email" value="etchimaths@gmail.com" />
+          <InfoRow label="Email" value="info@etchimaths.com" />
         </View>
 
         {/* About card */}
@@ -98,6 +98,11 @@ export default function AboutScreen() {
               onPress={() => openLink(s.url)}
               activeOpacity={0.8}
             >
+              {s.iconName ? (
+                <Ionicons name={s.iconName} size={20} color={s.color} style={{ marginRight: 8 }} />
+              ) : (
+                <Text style={{ fontSize: 16, marginRight: 8 }}>{s.emoji}</Text>
+              )}
               <Text style={[styles.linkBtnText, { color: s.color }]}>
                 {s.label}
               </Text>
@@ -165,11 +170,12 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primary,
     borderRadius: 16,
     alignItems: 'center',
-    paddingVertical: 28,
+    paddingTop: 52,
+    paddingBottom: 28,
     paddingHorizontal: 20,
     marginBottom: 16,
   },
-  heroIcon: { fontSize: 50, marginBottom: 8 },
+  heroImg: { width: 72, height: 72, marginBottom: 8 },
   heroTitle: {
     color: colors.gold,
     fontSize: 28,
@@ -239,6 +245,7 @@ const styles = StyleSheet.create({
     paddingVertical: 11,
     paddingHorizontal: 14,
     marginBottom: 8,
+    flexDirection: 'row',
     alignItems: 'center',
   },
   linkBtnText: { fontWeight: 'bold', fontSize: 14 },

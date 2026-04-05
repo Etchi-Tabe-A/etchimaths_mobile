@@ -78,20 +78,23 @@ export default function HomeScreen({ navigation }) {
 
       {/* Header */}
       <View style={styles.header}>
-        <View style={styles.headerLeft}>
-          <Image source={emuIcon} style={styles.headerImg} resizeMode="contain" />
-          <View>
-            <Text style={styles.headerTitle}>Etchimaths</Text>
-            <Text style={styles.headerSub}>(UNIVERSITY)</Text>
+        <View style={styles.headerDivider} />
+        <View style={styles.headerRow}>
+          <View style={styles.headerLeft}>
+            <Image source={emuIcon} style={styles.headerImg} resizeMode="contain" />
+            <View>
+              <Text style={styles.headerTitle}>Etchimaths</Text>
+              <Text style={styles.headerSub}>(UNIVERSITY)</Text>
+            </View>
           </View>
+          <TouchableOpacity
+            style={styles.hamburger}
+            onPress={() => setMenuOpen(true)}
+            accessibilityLabel="Menu"
+          >
+            <Text style={styles.hamburgerIcon}>☰</Text>
+          </TouchableOpacity>
         </View>
-        <TouchableOpacity
-          style={styles.hamburger}
-          onPress={() => setMenuOpen(true)}
-          accessibilityLabel="Menu"
-        >
-          <Text style={styles.hamburgerIcon}>☰</Text>
-        </TouchableOpacity>
       </View>
 
       {/* Dropdown Modal */}
@@ -176,14 +179,21 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primary,
   },
   header: {
+    flexDirection: 'column',
+    paddingHorizontal: 16,
+    paddingTop: 50,
+    paddingBottom: 40,
+    backgroundColor: colors.primary,
+  },
+  headerDivider: {
+    height: 2,
+    backgroundColor: colors.white,
+    marginBottom: 28,
+  },
+  headerRow: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingHorizontal: 16,
-    paddingVertical: 20,
-    paddingTop: 80,
-    paddingBottom: 40,
-    backgroundColor: colors.primary,
   },
   headerLeft: {
     flexDirection: 'row',

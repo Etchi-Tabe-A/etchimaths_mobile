@@ -11,6 +11,7 @@ import {
   KeyboardAvoidingView,
   Platform,
   Alert,
+  Image,
 } from 'react-native';
 import { colors } from '../theme/colors';
 import applications from '../data/applications';
@@ -79,6 +80,20 @@ export default function CalculatorScreen({ route }) {
             <Text style={styles.descIcon}>{applications[topicName]?.icon}</Text>
             <Text style={styles.descText}>{app.desc}</Text>
           </View>
+
+          {/* Illustration */}
+          {applications[topicName]?.image && (
+            <View style={styles.illustrationCard}>
+              <Image
+                source={applications[topicName].image}
+                style={styles.illustrationImg}
+                resizeMode="contain"
+              />
+              <Text style={styles.illustrationCaption}>
+                {topicName} — Mathematical Illustration
+              </Text>
+            </View>
+          )}
 
           {/* Inputs */}
           <View style={styles.section}>
@@ -151,7 +166,27 @@ const styles = StyleSheet.create({
     padding: 16,
     flexDirection: 'row',
     alignItems: 'flex-start',
-    marginBottom: 16,
+    marginBottom: 12,
+  },
+  illustrationCard: {
+    backgroundColor: colors.cardBg,
+    borderRadius: 12,
+    padding: 12,
+    marginBottom: 14,
+    borderWidth: 1,
+    borderColor: colors.border,
+    alignItems: 'center',
+  },
+  illustrationImg: {
+    width: '100%',
+    height: 180,
+  },
+  illustrationCaption: {
+    marginTop: 8,
+    fontSize: 11,
+    color: colors.textMuted,
+    fontStyle: 'italic',
+    textAlign: 'center',
   },
   descIcon: { fontSize: 26, marginRight: 10, marginTop: 2 },
   descText: { flex: 1, color: colors.white, fontSize: 13, lineHeight: 20 },

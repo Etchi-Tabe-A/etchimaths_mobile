@@ -3,13 +3,13 @@
 
 const exercises = [
   {
-    id: 'june2020',
-    title: 'June 2020 — Paper 1',
-    year: 2020,
+    id: 'random01',
+    title: 'Random Sample — 01',
+    year: 2025,
     available: true,
     totalQuestions: 25,
     timeMinutes: 45,
-    description: 'Past MCQ examination paper from June 2020.',
+    description: 'Sample MCQ Questions from top leading Universities worldwide, aligned with our curriculum topics.',
     questions: [
       {
         id: 1,
@@ -291,13 +291,13 @@ const exercises = [
   },
 
   {
-    id: 'june2019',
-    title: 'June 2019 — Paper 1',
-    year: 2019,
+    id: 'random02',
+    title: 'Random Sample — 02',
+    year: 2025,
     available: true,
     totalQuestions: 25,
     timeMinutes: 45,
-    description: 'Past MCQ examination paper from June 2019.',
+    description: 'Sample MCQ Questions from top leading Universities worldwide, aligned with our curriculum topics.',
     questions: [
       {
         id: 1,
@@ -582,24 +582,24 @@ const exercises = [
   },
 
   {
-    id: 'june2017',
-    title: 'June 2017 — Paper 1',
-    year: 2017,
+    id: 'random03',
+    title: 'Random Sample — 03',
+    year: 2025,
     available: false,
     totalQuestions: 25,
     timeMinutes: 45,
-    description: 'Past MCQ examination paper from June 2017.',
+    description: 'Sample MCQ Questions from top leading Universities worldwide, aligned with our curriculum topics.',
     questions: [],
   },
 
   {
-    id: 'june2016',
-    title: 'June 2016 — Paper 1',
-    year: 2016,
+    id: 'random04',
+    title: 'Random Sample — 04',
+    year: 2025,
     available: false,
     totalQuestions: 25,
     timeMinutes: 45,
-    description: 'Past MCQ examination paper from June 2016.',
+    description: 'Sample MCQ Questions from top leading Universities worldwide, aligned with our curriculum topics.',
     questions: [],
   },
 ];

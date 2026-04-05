@@ -23,7 +23,7 @@ const STATS = [
 
 const PAYMENT_OPTIONS = [
   { key: 'mtn', label: 'MTN Mobile Money', icon: '📱' },
-  { key: 'airtel', label: 'Airtel Money', icon: '📲' },
+  { key: 'orange', label: 'Orange Money', icon: '📲' },
   { key: 'bank', label: 'Bank Transfer', icon: '🏦' },
   { key: 'card', label: 'Credit / Debit Card', icon: '💳' },
 ];

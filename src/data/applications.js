@@ -57,6 +57,7 @@ const applications = {
   // ── MATRICES ───────────────────────────────────────────────────────────────
   Matrices: {
     icon: '🔢',
+    image: { uri: 'https://commons.wikimedia.org/wiki/Special:FilePath/Matris.png?width=400' },
     apps: [
       {
         title: 'Economic Production Planning (Leontief Model)',
@@ -158,6 +159,7 @@ const applications = {
   // ── VECTORS ────────────────────────────────────────────────────────────────
   Vectors: {
     icon: '➡️',
+    image: { uri: 'https://commons.wikimedia.org/wiki/Special:FilePath/Vector_add_scale.svg?width=400' },
     apps: [
       {
         title: 'Bridge Cable Force Resolution',
@@ -262,6 +264,7 @@ const applications = {
   // ── TRIGONOMETRY ───────────────────────────────────────────────────────────
   Trigonometry: {
     icon: '📐',
+    image: { uri: 'https://commons.wikimedia.org/wiki/Special:FilePath/Sine_cosine_one_period.svg?width=400' },
     apps: [
       {
         title: 'Surveying: Height of a Building',
@@ -353,6 +356,7 @@ const applications = {
   // ── COMPLEX NUMBERS ────────────────────────────────────────────────────────
   'Complex Numbers': {
     icon: '🌀',
+    image: { uri: 'https://commons.wikimedia.org/wiki/Special:FilePath/Complex_number_illustration.svg?width=400' },
     apps: [
       {
         title: 'AC Impedance Analysis',
@@ -453,6 +457,7 @@ const applications = {
   // ── COORDINATE GEOMETRY ────────────────────────────────────────────────────
   'Coordinate Geometry': {
     icon: '📍',
+    image: { uri: 'https://commons.wikimedia.org/wiki/Special:FilePath/Cartesian-coordinate-system.svg?width=400' },
     apps: [
       {
         title: 'GPS Distance Between Two Cities (Haversine)',
@@ -563,6 +568,7 @@ const applications = {
   // ── DIFFERENTIAL EQUATIONS ─────────────────────────────────────────────────
   'Differential Equations': {
     icon: '📈',
+    image: { uri: 'https://commons.wikimedia.org/wiki/Special:FilePath/Logistic-curve.svg?width=400' },
     apps: [
       {
         title: 'Population Growth (Logistic Model)',
@@ -667,6 +673,7 @@ const applications = {
   // ── INTEGRATION ────────────────────────────────────────────────────────────
   Integration: {
     icon: '∫',
+    image: { uri: 'https://commons.wikimedia.org/wiki/Special:FilePath/Integral_as_region_under_curve.svg?width=400' },
     apps: [
       {
         title: 'Industrial Tank Volume (Solid of Revolution)',
@@ -761,6 +768,7 @@ const applications = {
   // ── LAPLACE TRANSFORMS ─────────────────────────────────────────────────────
   'Laplace Transforms': {
     icon: '🔄',
+    image: { uri: 'https://commons.wikimedia.org/wiki/Special:FilePath/RLC_series_circuit_v1.svg?width=400' },
     apps: [
       {
         title: 'RLC Circuit Transient Response',
@@ -881,6 +889,7 @@ const applications = {
   // ── LIMITS & DIFFERENTIATION ───────────────────────────────────────────────
   'Limits & Differentiation': {
     icon: '📉',
+    image: { uri: 'https://commons.wikimedia.org/wiki/Special:FilePath/Tangent_to_a_curve.svg?width=400' },
     apps: [
       {
         title: 'Marginal Cost in Manufacturing',
@@ -992,6 +1001,7 @@ const applications = {
   // ── PROBABILITY & STATISTICS ───────────────────────────────────────────────
   'Probability & Statistics': {
     icon: '🎲',
+    image: { uri: 'https://commons.wikimedia.org/wiki/Special:FilePath/Standard_deviation_diagram.svg?width=400' },
     apps: [
       {
         title: 'Factory Quality Control (Binomial)',
@@ -1096,6 +1106,7 @@ const applications = {
   // ── SEQUENCES & SERIES ─────────────────────────────────────────────────────
   'Sequences & Series': {
     icon: '🔗',
+    image: { uri: 'https://commons.wikimedia.org/wiki/Special:FilePath/Geometric_progression_convergence_diagram.svg?width=400' },
     apps: [
       {
         title: 'Retirement Savings Plan (Compound Interest)',
@@ -1220,6 +1231,7 @@ const applications = {
   // ── POLYNOMIALS ────────────────────────────────────────────────────────────
   Polynomials: {
     icon: '📊',
+    image: { uri: 'https://commons.wikimedia.org/wiki/Special:FilePath/Polynomialdeg5.svg?width=400' },
     apps: [
       {
         title: 'Projectile Trajectory (Quadratic)',
@@ -1338,6 +1350,7 @@ const applications = {
   // ── NUMERICAL METHODS ──────────────────────────────────────────────────────
   'Numerical Methods': {
     icon: '🔬',
+    image: { uri: 'https://commons.wikimedia.org/wiki/Special:FilePath/Newton_iteration.svg?width=400' },
     apps: [
       {
         title: 'Newton-Raphson: Square Root Calculator',
@@ -1462,6 +1475,7 @@ const applications = {
   // ── DISCRETE RANDOM VARIABLES ──────────────────────────────────────────────
   'Discrete Random Variables': {
     icon: '🎯',
+    image: { uri: 'https://commons.wikimedia.org/wiki/Special:FilePath/Binomial_distribution_pmf.svg?width=400' },
     apps: [
       {
         title: 'Insurance Expected Payout Analysis',
