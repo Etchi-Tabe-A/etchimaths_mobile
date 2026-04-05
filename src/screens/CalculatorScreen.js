@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import {
   View,
   Text,
@@ -12,9 +12,11 @@ import {
   Platform,
   Alert,
   Image,
+  ActivityIndicator,
 } from 'react-native';
 import { colors } from '../theme/colors';
 import applications from '../data/applications';
+import { illustrations } from '../illustrations';
 
 export default function CalculatorScreen({ route }) {
   const { topicName, appIndex } = route.params;
@@ -26,6 +28,8 @@ export default function CalculatorScreen({ route }) {
   const [values, setValues] = useState(defaultValues);
   const [results, setResults] = useState(null);
   const [error, setError] = useState('');
+  const [imgError, setImgError] = useState(false);
+  const [imgLoading, setImgLoading] = useState(true);
 
   if (!app) {
     return (
@@ -82,18 +86,44 @@ export default function CalculatorScreen({ route }) {
           </View>
 
           {/* Illustration */}
-          {applications[topicName]?.image && (
-            <View style={styles.illustrationCard}>
-              <Image
-                source={applications[topicName].image}
-                style={styles.illustrationImg}
-                resizeMode="contain"
-              />
-              <Text style={styles.illustrationCaption}>
-                {topicName} — Mathematical Illustration
-              </Text>
-            </View>
-          )}
+          {(() => {
+            const illustrationKey = app.illustration;
+            const Illustration = illustrationKey && illustrations[illustrationKey];
+            if (Illustration) {
+              return (
+                <View style={styles.illustrationCard}>
+                  <Illustration />
+                </View>
+              );
+            }
+            if (applications[topicName]?.image && !imgError) {
+              return (
+                <View style={styles.illustrationCard}>
+                  {imgLoading && (
+                    <ActivityIndicator
+                      style={styles.imgLoader}
+                      size="small"
+                      color={colors.accent}
+                    />
+                  )}
+                  <Image
+                    source={{
+                      uri: applications[topicName].image.uri,
+                      headers: { 'User-Agent': 'Etchimaths/1.0 (expo; educational)' },
+                    }}
+                    style={[styles.illustrationImg, imgLoading && { opacity: 0 }]}
+                    resizeMode="contain"
+                    onLoad={() => setImgLoading(false)}
+                    onError={() => { setImgLoading(false); setImgError(true); }}
+                  />
+                  <Text style={styles.illustrationCaption}>
+                    {topicName} — Mathematical Illustration
+                  </Text>
+                </View>
+              );
+            }
+            return null;
+          })()}
 
           {/* Inputs */}
           <View style={styles.section}>
@@ -180,6 +210,11 @@ const styles = StyleSheet.create({
   illustrationImg: {
     width: '100%',
     height: 180,
+  },
+  imgLoader: {
+    position: 'absolute',
+    height: 180,
+    alignSelf: 'center',
   },
   illustrationCaption: {
     marginTop: 8,

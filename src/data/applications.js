@@ -57,10 +57,10 @@ const applications = {
   // ── MATRICES ───────────────────────────────────────────────────────────────
   Matrices: {
     icon: '🔢',
-    image: { uri: 'https://commons.wikimedia.org/wiki/Special:FilePath/Matris.png?width=400' },
     apps: [
       {
         title: 'Economic Production Planning (Leontief Model)',
+        illustration: 'MatricesLeontief',
         desc: 'An Economics student is modelling a 2-sector economy. Given the technology matrix A and final demand vector D, they compute total production X = (I − A)⁻¹ · D needed to meet demand.',
         inputs: [
           ['a₁₁ (sector 1→1)', '0.2'], ['a₁₂ (sector 2→1)', '0.3'],
@@ -80,6 +80,7 @@ const applications = {
       },
       {
         title: '2D Image Rotation in Computer Graphics',
+        illustration: 'MatricesRotation',
         desc: 'A Game Developer rotates a sprite position (x, y) by θ° using the 2D rotation matrix R(θ).',
         inputs: [['x coordinate', '3'], ['y coordinate', '4'], ['Angle θ (degrees)', '45']],
         compute(v) {
@@ -94,6 +95,7 @@ const applications = {
       },
       {
         title: "Solving Simultaneous Equations (Cramer's Rule)",
+        illustration: 'MatricesCramer',
         desc: 'A Physics student finds two unknown forces F₁ and F₂ from equilibrium equations using Cramer\'s Rule.',
         inputs: [
           ['a (coeff of F₁, eq1)', '3'], ['b (coeff of F₂, eq1)', '2'],
@@ -117,6 +119,7 @@ const applications = {
       },
       {
         title: 'Population Migration Model (Markov Chain)',
+        illustration: 'MatricesMarkov',
         desc: 'An Urban Planner predicts next year\'s population distribution between City and Suburbs.',
         inputs: [
           ['City population (thousands)', '600'], ['Suburb population (thousands)', '400'],
@@ -135,6 +138,7 @@ const applications = {
       },
       {
         title: 'Scaling and Reflection Transformation',
+        illustration: 'MatricesScaling',
         desc: 'A Graphic Designer transforms an anchor point by scaling and optional x-axis reflection.',
         inputs: [
           ['x coordinate', '5'], ['y coordinate', '3'],
@@ -356,10 +360,10 @@ const applications = {
   // ── COMPLEX NUMBERS ────────────────────────────────────────────────────────
   'Complex Numbers': {
     icon: '🌀',
-    image: { uri: 'https://commons.wikimedia.org/wiki/Special:FilePath/Complex_number_illustration.svg?width=400' },
     apps: [
       {
         title: 'AC Impedance Analysis',
+        illustration: 'ComplexImpedance',
         desc: 'Impedance Z = R + j(ωL − 1/ωC) of a series RLC circuit at a given frequency.',
         inputs: [
           ['Resistance R (Ω)', '100'], ['Inductance L (H)', '0.5'],
@@ -380,6 +384,7 @@ const applications = {
       },
       {
         title: 'Signal Filter Gain and Phase Shift',
+        illustration: 'ComplexGain',
         desc: 'Transfer function H = a + jb: gain and phase shift applied to input signal amplitude V_in.',
         inputs: [['Real part a', '0.8'], ['Imaginary part b', '-0.6'], ['Input amplitude V_in (V)', '5']],
         compute(v) {
@@ -396,6 +401,7 @@ const applications = {
       },
       {
         title: 'AC Power Factor Correction',
+        illustration: 'ComplexPower',
         desc: 'Real, reactive, and apparent power for load Z = R + jX on a V_rms supply.',
         inputs: [
           ['Resistance R (Ω)', '30'], ['Reactance X (Ω)', '40'],
@@ -415,6 +421,7 @@ const applications = {
       },
       {
         title: 'Rectangular to Polar Form Conversion',
+        illustration: 'ComplexPolar',
         desc: 'Convert complex number z = a + jb to polar form r∠θ and Euler form.',
         inputs: [['Real part a', '3'], ['Imaginary part b', '4']],
         compute(v) {
@@ -433,6 +440,7 @@ const applications = {
       },
       {
         title: 'Series RLC Resonant Frequency',
+        illustration: 'ComplexResonance',
         desc: 'Resonant frequency f₀ = 1/(2π√(LC)) and quality factor Q of a series RLC circuit.',
         inputs: [
           ['Inductance L (H)', '0.01'], ['Capacitance C (F)', '0.0001'],
