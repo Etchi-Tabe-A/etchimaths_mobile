@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "Etchimaths",
+    "slug": "etchimaths-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/emu.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/emu.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0C1446"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.etchiworks.etchimaths"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/emu.png",
+        "backgroundColor": "#0C1446"
+      },
+      "package": "com.etchiworks.etchimaths"
+    },
+    "web": {
+      "favicon": "./assets/emu.png"
+    }
+  }
+}
